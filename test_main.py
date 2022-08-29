@@ -1,5 +1,5 @@
 def sum_val(a,b):
-    return a+b
+    return a*b
 
 def diff_val(a,b):
     return a-b
