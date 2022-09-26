@@ -10,10 +10,25 @@ jobs:
       - name: get repository
         uses: actions/checkout@v3
       - run: ls -al
+
+      # Install Python
       - name: Configure Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
+      # Run Test
       - run: pip install pytest
       - run: pytest -v
-      
+
+      # Publish to Mqtt
+      - name: Introduction to Mqtt
+        uses: juhrlass/mqtt-action@master
+        with:
+          protocol: mqtt
+          host:  broker.hivemq.com
+          port: 1883
+          topic: "OCDdevops"
+          message: "Build successful"
+          username: ""
+          password: ""
