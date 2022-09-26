@@ -29,6 +29,7 @@ jobs:
           host:  broker.hivemq.com
           port: 1883
           topic: "OCDdevops"
-          message: "${{ github.actor }} Build successful" 
+          message: "Le build declenché  par ${{ github.actor }} sur le projet ${{ github.repository }} avec la branche ${{ github.ref_name }} est successful" 
           username: ""
           password: ""
+
