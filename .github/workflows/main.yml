@@ -26,10 +26,10 @@ jobs:
         uses: juhrlass/mqtt-action@master
         with:
           protocol: mqtt
-          host:  broker.hivemq.com
-          port: 1883
+          host:  0cd303f3924c4aaa88f328d12325b433.s1.eu.hivemq.cloud 
+          port: 8883
           topic: "OCDdevops"
           message: "Le build declenché  par ${{ github.actor }} sur le projet ${{ github.repository }} avec la branche ${{ github.ref_name }} est successful" 
-          username: ""
-          password: ""
+          username: "cityhunter"
+          password: "cityhunterx"
 
