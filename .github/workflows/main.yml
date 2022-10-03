@@ -31,5 +31,5 @@ jobs:
           topic: "OCDdevops"
           message: "Le build declenché  par ${{ github.actor }} sur le projet ${{ github.repository }} avec la branche ${{ github.ref_name }} est successful" 
           username: "cityhunter"
-          password: "cityhunterx"
+          password: "${{ secrets.MQTT_PASSWORD}}"
 
